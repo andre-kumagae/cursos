@@ -247,7 +247,7 @@ Maratona Java Virado No Jiraya. Regravado desde a aula 0, com extrema qualidade,
 - [x] [230 - Concorrência pt 02 - Lock and ReentrantLock](https://www.youtube.com/watch?v=4yw1WJUIrwg&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=231&t=2s&pp=iAQB)
 - [x] [231 - Concorrência pt 03 - Conditions](https://www.youtube.com/watch?v=8Gxw4WzYx-w&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=232&t=1s&pp=iAQB)
 - [x] [232 - Concorrência pt 04 - ReentrantReadWriteLock](https://www.youtube.com/watch?v=hsnTg0Y5Iuw&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=233&t=1s&pp=iAQB)
-- [ ] [233 - Concorrência pt 05 - CopyOnWriteArrayList](https://www.youtube.com/watch?v=6rCcB4EVkm4&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=234&pp=iAQB)
+- [x] [233 - Concorrência pt 05 - CopyOnWriteArrayList](https://www.youtube.com/watch?v=6rCcB4EVkm4&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=234&pp=iAQB)
 - [ ] [234 - Concorrência pt 06 - ArrayBlockingQueue](https://www.youtube.com/watch?v=MkZjut9L6W8&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=235&pp=iAQB)
 - [ ] [235 - Concorrência pt 07 - LinkedTransferQueue](https://www.youtube.com/watch?v=gZwUdhZBARo&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=236&pp=iAQB)
 - [ ] [236 - Concorrência pt 08 - Executors pt 01 - Thread Pools](https://www.youtube.com/watch?v=y7PUfmtWIXs&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=237&pp=iAQB)
