@@ -1,4 +1,4 @@
-package academy.devdojo.maratonajava.javacore.ZZFthreads.test;
+package academy.devdojo.maratonajava.javacore.ZZGconcorrencia.test;
 
 import academy.devdojo.maratonajava.javacore.ZZFthreads.dominio.Members;
 import academy.devdojo.maratonajava.javacore.ZZFthreads.service.EmailDeliveryService;
@@ -20,6 +20,5 @@ public class EmailDeliverytest01 {
             }
             members.addMemberEmail(email);
         }
-        System.exit(0);
     }
 }
