@@ -254,7 +254,7 @@ Maratona Java Virado No Jiraya. Regravado desde a aula 0, com extrema qualidade,
 - [x] [237 - Concorrência pt 09 - Executors pt 02 - ScheduledExecutorService](https://www.youtube.com/watch?v=oxwUqSAbMLY&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=238&pp=iAQB)
 - [x] [238 - Concorrência pt 10 - Executors pt 03 - Interface Callable](https://www.youtube.com/watch?v=ct9KQy16pVE&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=239&pp=iAQB)
 - [x] [239 - Concorrência pt 11 - Executors pt 04 - Future](https://www.youtube.com/watch?v=NzXEuBgTHKE&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=240&pp=iAQB)
-- [ ] [240 - Concorrência pt 12 - CompletableFuture pt 01 - get and join](https://www.youtube.com/watch?v=ZKDgjM_x4bo&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=241&pp=iAQB)
+- [x] [240 - Concorrência pt 12 - CompletableFuture pt 01 - get and join](https://www.youtube.com/watch?v=ZKDgjM_x4bo&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=241&pp=iAQB)
 - [ ] [241 - Concorrência pt 13 - CompletableFuture pt 02 - Streams](https://www.youtube.com/watch?v=iPQNgSnj41o&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=242&pp=iAQB)
 - [ ] [242 - Concorrência pt 14 - CompletableFuture pt 03 - ThreadFactory](https://www.youtube.com/watch?v=o7x9PmwKxv0&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=243&pp=iAQB)
 - [ ] [243 - Concorrência pt 15 - CompletableFuture pt 04 - Encadeando chamadas pt 01](https://www.youtube.com/watch?v=Id9RyqFuRiM&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=244&pp=iAQB)
