@@ -258,7 +258,7 @@ Maratona Java Virado No Jiraya. Regravado desde a aula 0, com extrema qualidade,
 - [x] [241 - Concorrência pt 13 - CompletableFuture pt 02 - Streams](https://www.youtube.com/watch?v=iPQNgSnj41o&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=242&pp=iAQB)
 - [x] [242 - Concorrência pt 14 - CompletableFuture pt 03 - ThreadFactory](https://www.youtube.com/watch?v=o7x9PmwKxv0&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=243&pp=iAQB)
 - [x] [243 - Concorrência pt 15 - CompletableFuture pt 04 - Encadeando chamadas pt 01](https://www.youtube.com/watch?v=Id9RyqFuRiM&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=244&pp=iAQB)
-- [ ] [244 - Concorrência pt 16 - CompletableFuture pt 05 - Encadeando chamadas pt 02](https://www.youtube.com/watch?v=W2j3KzVgiAs&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=245&pp=iAQB)
+- [x] [244 - Concorrência pt 16 - CompletableFuture pt 05 - Encadeando chamadas pt 02](https://www.youtube.com/watch?v=W2j3KzVgiAs&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=245&pp=iAQB)
 - [ ] [245 - Concorrência pt 17 - CompletableFuture pt 06 - allOf, anyOf](https://www.youtube.com/watch?v=BdOD7-unrRM&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=246&pp=iAQB)
 - [ ] [246 - Padrões de Projeto pt 01 - Builder](https://www.youtube.com/watch?v=UL-FdBvthHU&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=247&pp=iAQB)
 - [ ] [247 - Padrões de Projeto pt 02 - Factory](https://www.youtube.com/watch?v=k3BbX3Ysd5o&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=248&pp=iAQB)
