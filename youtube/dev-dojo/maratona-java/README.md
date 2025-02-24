@@ -261,7 +261,7 @@ Maratona Java Virado No Jiraya. Regravado desde a aula 0, com extrema qualidade,
 - [x] [244 - Concorrência pt 16 - CompletableFuture pt 05 - Encadeando chamadas pt 02](https://www.youtube.com/watch?v=W2j3KzVgiAs&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=245&pp=iAQB)
 - [x] [245 - Concorrência pt 17 - CompletableFuture pt 06 - allOf, anyOf](https://www.youtube.com/watch?v=BdOD7-unrRM&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=246&pp=iAQB)
 - [x] [246 - Padrões de Projeto pt 01 - Builder](https://www.youtube.com/watch?v=UL-FdBvthHU&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=247&pp=iAQB)
-- [ ] [247 - Padrões de Projeto pt 02 - Factory](https://www.youtube.com/watch?v=k3BbX3Ysd5o&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=248&pp=iAQB)
+- [x] [247 - Padrões de Projeto pt 02 - Factory](https://www.youtube.com/watch?v=k3BbX3Ysd5o&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=248&pp=iAQB)
 - [ ] [248 - Padrões de Projeto pt 03 - Singleton pt 01 - Eager Initialization](https://www.youtube.com/watch?v=p4e2YMW3H6k&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=249&pp=iAQB)
 - [ ] [249 - Padrões de Projeto pt 04 - Singleton pt 02 - Lazy Initialization](https://www.youtube.com/watch?v=9OvzSW1hAY0&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=250&pp=iAQB)
 - [ ] [250 - Padrões de Projeto pt 05 - Singleton pt 03 - Singleton with enumeration](https://www.youtube.com/watch?v=eutGuy74Ccg&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=251&pp=iAQB)
