@@ -1,4 +1,4 @@
-package academy.devdojo.maratonajava.javacore.ZZGconcorrencia;
+package academy.devdojo.maratonajava.javacore.ZZGconcorrencia.test;
 
 import java.util.Iterator;
 import java.util.List;

@@ -251,7 +251,7 @@ Maratona Java Virado No Jiraya. Regravado desde a aula 0, com extrema qualidade,
 - [x] [234 - Concorrência pt 06 - ArrayBlockingQueue](https://www.youtube.com/watch?v=MkZjut9L6W8&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=235&pp=iAQB)
 - [x] [235 - Concorrência pt 07 - LinkedTransferQueue](https://www.youtube.com/watch?v=gZwUdhZBARo&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=236&pp=iAQB)
 - [x] [236 - Concorrência pt 08 - Executors pt 01 - Thread Pools](https://www.youtube.com/watch?v=y7PUfmtWIXs&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=237&pp=iAQB)
-- [ ] [237 - Concorrência pt 09 - Executors pt 02 - ScheduledExecutorService](https://www.youtube.com/watch?v=oxwUqSAbMLY&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=238&pp=iAQB)
+- [x] [237 - Concorrência pt 09 - Executors pt 02 - ScheduledExecutorService](https://www.youtube.com/watch?v=oxwUqSAbMLY&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=238&pp=iAQB)
 - [ ] [238 - Concorrência pt 10 - Executors pt 03 - Interface Callable](https://www.youtube.com/watch?v=ct9KQy16pVE&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=239&pp=iAQB)
 - [ ] [239 - Concorrência pt 11 - Executors pt 04 - Future](https://www.youtube.com/watch?v=NzXEuBgTHKE&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=240&pp=iAQB)
 - [ ] [240 - Concorrência pt 12 - CompletableFuture pt 01 - get and join](https://www.youtube.com/watch?v=ZKDgjM_x4bo&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=241&pp=iAQB)
