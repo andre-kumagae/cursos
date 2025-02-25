@@ -269,7 +269,7 @@ Maratona Java Virado No Jiraya. Regravado desde a aula 0, com extrema qualidade,
 - [x] [252 - JDBC pt 01 - Instalando Docker](https://www.youtube.com/watch?v=Q4UgGZfTgCs&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=253&t=2s&pp=iAQB)
 - [x] [253 - JDBC pt 02 - Criando container MySQL](https://www.youtube.com/watch?v=VUbrBmiKkeQ&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=254&pp=iAQB)
 - [x] [254 - JDBC pt 03 - Instalando Workbench, criando schema e tabelas](https://www.youtube.com/watch?v=NO8zP0Xyl8Q&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=255&pp=iAQB)
-- [ ] [255 - JDBC pt 04 - Instalando e adicionando maven ao projeto](https://www.youtube.com/watch?v=1MPs67lkmuA&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=256&pp=iAQB)
+- [x] [255 - JDBC pt 04 - Instalando e adicionando maven ao projeto](https://www.youtube.com/watch?v=1MPs67lkmuA&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=256&pp=iAQB)
 - [ ] [256 - JDBC pt 05 - Adicionando dependência e conectando com banco](https://www.youtube.com/watch?v=JatWzzOSGwg&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=257&pp=iAQB)
 - [ ] [257 - JDBC pt 06 - Inserindo dados com Statement](https://www.youtube.com/watch?v=-1Ctzcf3bFQ&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=258&pp=iAQB)
 - [ ] [258 - JDBC pt 07 - Lombok e Log4J2](https://www.youtube.com/watch?v=Dpe6f7JpVIk&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=259&pp=iAQB)
