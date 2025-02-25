@@ -266,7 +266,7 @@ Maratona Java Virado No Jiraya. Regravado desde a aula 0, com extrema qualidade,
 - [x] [249 - Padrões de Projeto pt 04 - Singleton pt 02 - Lazy Initialization](https://www.youtube.com/watch?v=9OvzSW1hAY0&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=250&pp=iAQB)
 - [x] [250 - Padrões de Projeto pt 05 - Singleton pt 03 - Singleton with enumeration](https://www.youtube.com/watch?v=eutGuy74Ccg&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=251&pp=iAQB)
 - [x] [251 - Padrões de Projeto pt 06 - Data Transfer Object](https://www.youtube.com/watch?v=DVtkSOD86Ag&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=252&pp=iAQB)
-- [ ] [252 - JDBC pt 01 - Instalando Docker](https://www.youtube.com/watch?v=Q4UgGZfTgCs&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=253&t=2s&pp=iAQB)
+- [x] [252 - JDBC pt 01 - Instalando Docker](https://www.youtube.com/watch?v=Q4UgGZfTgCs&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=253&t=2s&pp=iAQB)
 - [ ] [253 - JDBC pt 02 - Criando container MySQL](https://www.youtube.com/watch?v=VUbrBmiKkeQ&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=254&pp=iAQB)
 - [ ] [254 - JDBC pt 03 - Instalando Workbench, criando schema e tabelas](https://www.youtube.com/watch?v=NO8zP0Xyl8Q&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=255&pp=iAQB)
 - [ ] [255 - JDBC pt 04 - Instalando e adicionando maven ao projeto](https://www.youtube.com/watch?v=1MPs67lkmuA&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=256&pp=iAQB)
