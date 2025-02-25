@@ -65,7 +65,7 @@ public class Person {
         public PersonBuilder() {
         }
 
-        public static PersonBuilder aPerson() {
+        public static PersonBuilder builder() {
             return new PersonBuilder();
         }
 

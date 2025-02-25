@@ -9,10 +9,21 @@ class Real implements Currency {
     public String getSymbol() {
         return "R$";
     }
-}
+    @Override
+    public String toString() {
+        return getSymbol();
+    }
+
+    }
 class Dollar implements Currency {
     @Override
     public String getSymbol() {
         return "U$";
+    }
+
+    @Override
+    public String toString() {
+        return getSymbol();
+
     }
 }
