@@ -3,6 +3,8 @@ package academy.devdojo.maratonajava.javacore.ZZIjdbc.service;
 import academy.devdojo.maratonajava.javacore.ZZIjdbc.dominio.Producer;
 import academy.devdojo.maratonajava.javacore.ZZIjdbc.repository.ProducerRepository;
 
+import java.util.List;
+
 public class ProducerService {
     public static void save(Producer producer) {
         ProducerRepository.save(producer);
@@ -19,6 +21,10 @@ public class ProducerService {
 //        validacao de id ter que ser 1 ou maior
         requireValidId(producer.getId());
         ProducerRepository.update(producer);
+    }
+
+    public static List<Producer> findAll() {
+       return ProducerRepository.findAll();
     }
 
     // criando metodo validador de id para evitar repeticao de codigo
