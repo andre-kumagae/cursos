@@ -7,11 +7,24 @@ public class ProducerService {
     public static void save(Producer producer) {
         ProducerRepository.save(producer);
     }
-    public static void delete(int id) {
+
+//    utilizando wrapper class para evitar redundancia do teste id == null
+    public static void delete(Integer id) {
 //        validacao de id ter que ser 1 ou maior
-        if (id <= 0) {
+        requireValidId(id);
+        ProducerRepository.delete(id);
+    }
+
+    public static void update(Producer producer) {
+//        validacao de id ter que ser 1 ou maior
+        requireValidId(producer.getId());
+        ProducerRepository.update(producer);
+    }
+
+    // criando metodo validador de id para evitar repeticao de codigo
+    private static void requireValidId(Integer id) {
+        if (id == null || id <= 0) {
             throw new IllegalArgumentException("Invalid value for id");
         }
-        ProducerRepository.delete(id);
     }
 }
