@@ -273,7 +273,7 @@ Maratona Java Virado No Jiraya. Regravado desde a aula 0, com extrema qualidade,
 - [x] [256 - JDBC pt 05 - Adicionando dependência e conectando com banco](https://www.youtube.com/watch?v=JatWzzOSGwg&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=257&pp=iAQB)
 - [x] [257 - JDBC pt 06 - Inserindo dados com Statement](https://www.youtube.com/watch?v=-1Ctzcf3bFQ&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=258&pp=iAQB)
 - [x] [258 - JDBC pt 07 - Lombok e Log4J2](https://www.youtube.com/watch?v=Dpe6f7JpVIk&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=259&pp=iAQB)
-- [ ] [259 - JDBC pt 08 - Deletando dados com Statement](https://www.youtube.com/watch?v=jO0dAZ2CnJY&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=260&pp=iAQB)
+- [x] [259 - JDBC pt 08 - Deletando dados com Statement](https://www.youtube.com/watch?v=jO0dAZ2CnJY&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=260&pp=iAQB)
 - [ ] [260 - JDBC pt 09 - Atualizando dados com Statement](https://www.youtube.com/watch?v=e_qj9ee4cv0&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=261&pp=iAQB)
 - [ ] [261 - JDBC pt 10 - Buscando dados com ResultSet pt 01 - findAll](https://www.youtube.com/watch?v=SA88IvP6Wr8&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=262&pp=iAQB)
 - [ ] [262 - JDBC pt 11 - Buscando dados com ResultSet pt 02 - findByName](https://www.youtube.com/watch?v=kAsRdPNp1-E&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=263&pp=iAQB)
