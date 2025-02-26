@@ -13,8 +13,10 @@ public class ConnectionFactoryTest01 {
 //        Producer producerToUpdate = Producer.builder().name("MADHOUSE").id(1).build();
 //        ProducerService.save(producer);
 //        ProducerService.update(producerToUpdate);
-        List<Producer> producerList = ProducerService.findAll();
-        log.info("Producers found '{}'", producerList);
+        List<Producer> producerList1 = ProducerService.findAll();
+        log.info("Producers found '{}'", producerList1);
+        List<Producer> producerName = ProducerService.findByName("Mad");
+        log.info("Producers found '{}'", producerName);
 //        ProducerService.delete(3);
 //        ProducerService.delete(4);
 //        ProducerService.delete(5);

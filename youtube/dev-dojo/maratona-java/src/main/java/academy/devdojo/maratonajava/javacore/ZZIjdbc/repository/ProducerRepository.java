@@ -52,35 +52,31 @@ public class ProducerRepository {
 
     public static List<Producer> findAll() {
         log.info("Finding all producers");
-//        Fazendo um select que retorna dados já declarados na query
-        String sql = "SELECT id, name FROM anime_store.producer;";
-//        criamos uma List para receber os valores de select
+        return findByName("");
+    }
+
+    public static List<Producer> findByName(String name) {
+//        adicionei essa condicional para nao mostrar no log de findAll 2 vezes
+        if (!name.equals("")) {
+            log.info("Finding by producer name");
+        }
+// No MySQL, a query é essa: SELECT * FROM anime_store.producer WHERE name like "%%";
+//        Podemos declarar a própria porcentagem como caracter de escape:
+//        String sql = "SELECT * FROM anime_store.producer WHERE name like %%%s%%;".formatted(name);
+//        Onde temos 1 escape para %, outro para %s e o ultimo para %
+//        Ou colocar no formatted, que ficaria mais legivel
+        String sql = "SELECT * FROM anime_store.producer WHERE name like '%s';".formatted("%"+name+"%");
         List<Producer> producers = new ArrayList<>();
-//             adicionamos a classe resultSet ao try with resources
-//             com isso conn cria a conexao, stmt cria a query e rs a executa ja com o retorno do select
         try (Connection conn = ConnectionFactory.getConnection();
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
             while (rs.next()) {
-//                Temos a opção de declarar linha a linha com variáveis ou em 1 linha
-
-//                Declarando linha a linha
-
-//                aqui podemos usar o indice, porem se atente que o primeiro indice é 1, nao 0. Ex.:  rs.getInt(1);
-//                var id = rs.getInt("id");
-//                var name = rs.getString("name");
-//                Producer producer = Producer.builder().id(id).name(name).build();
-//                producers.add(producer);
-
-//                Declarando sem variaveis em 1 linha
-
                 producers.add(Producer.builder().id(rs.getInt("id")).name(rs.getString("name")).build());
             }
         } catch (SQLException e) {
             log.error("Error while trying to find all producers", e);
             throw new RuntimeException(e);
         }
-//        aqui retornamos a lista vazia em vez de dar uma condicao de return null pois é mais chato de tratar
         return producers;
     }
 }

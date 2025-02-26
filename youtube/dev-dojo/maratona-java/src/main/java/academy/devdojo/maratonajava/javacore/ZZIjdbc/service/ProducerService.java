@@ -23,8 +23,14 @@ public class ProducerService {
         ProducerRepository.update(producer);
     }
 
+    //    Como funciona como um getter, nao precisamos validar e nem de parâmetros. Apenas ter o return
     public static List<Producer> findAll() {
        return ProducerRepository.findAll();
+    }
+
+//    Aqui precisa receber a String de parametro
+    public static List<Producer> findByName(String name) {
+        return ProducerRepository.findByName(name);
     }
 
     // criando metodo validador de id para evitar repeticao de codigo
