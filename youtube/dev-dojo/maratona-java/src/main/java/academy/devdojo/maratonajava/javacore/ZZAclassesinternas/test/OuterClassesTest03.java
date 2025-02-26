@@ -5,7 +5,7 @@ public class OuterClassesTest03 {
 //    porem uma classe estatica tem que estar dentro de outra top-level (não-aninhada)
 //    Ela só fica dentro de outra classe por questões de empacotamento ou por ser relacionado a classe externa
 private String nome = "Wiliiam";
-    static class Nested {
+    public static class Nested {
         //    por ser estatica, nao consegue acessar variaveis do objeto. Deve ser declarado juntamente com a criacao da instancia da classe
         private String sobrenome = "Suane";
         void print() {
@@ -17,5 +17,7 @@ private String nome = "Wiliiam";
 //        perceba que apesar da classe ser estatica, o metooo nao é. Logo, precisa d eum objeto
         Nested nested = new Nested();
         nested.print();
+//        exemplo para ajudar a entender a instancia build na aula 257 de jdbc
+        OuterClassesTest03.Nested outer = new OuterClassesTest03.Nested();
     }
 }
