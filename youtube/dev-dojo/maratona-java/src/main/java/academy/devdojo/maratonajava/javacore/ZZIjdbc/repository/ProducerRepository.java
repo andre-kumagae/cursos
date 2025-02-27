@@ -167,4 +167,28 @@ public class ProducerRepository {
             throw new RuntimeException(e);
         }
     }
+
+    public static List<Producer> findByNameAndUpdateToUpperCase(String name) {
+        if (!name.equals("")) {
+            log.info("Finding by producer name");
+        }
+        String sql = "SELECT * FROM anime_store.producer WHERE name like '%s';".formatted("%" + name + "%");
+        List<Producer> producers = new ArrayList<>();
+        try (Connection conn = ConnectionFactory.getConnection();
+             Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+             ResultSet rs = stmt.executeQuery(sql)) {
+            while (rs.next()) {
+//                Importante que utilizemos tanto updateString quanto updateRow para o ResultSet realizar o Update
+                rs.updateString("name", rs.getString("name").toUpperCase());
+                rs.updateRow();
+                producers.add(Producer.builder().id(rs.getInt("id")).name(rs.getString("name")).build());
+            }
+        } catch (SQLException e) {
+            log.error("Error while trying to find all producers", e);
+            throw new RuntimeException(e);
+        }
+        return producers;
+    }
+
+
 }

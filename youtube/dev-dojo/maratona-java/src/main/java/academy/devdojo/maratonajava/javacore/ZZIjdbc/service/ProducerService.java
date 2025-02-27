@@ -51,4 +51,8 @@ public class ProducerService {
             throw new IllegalArgumentException("Invalid value for id");
         }
     }
+
+    public static List<Producer> findByNameAndUpdateToUpperCase(String name) {
+        return ProducerRepository.findByNameAndUpdateToUpperCase(name);
+    }
 }

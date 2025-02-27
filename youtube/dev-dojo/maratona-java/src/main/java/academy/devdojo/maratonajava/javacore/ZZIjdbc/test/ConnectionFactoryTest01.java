@@ -9,6 +9,8 @@ import java.util.List;
 @Log4j2
 public class ConnectionFactoryTest01 {
     public static void main(String[] args) {
-        ProducerService.showTypeScrollWorking();
+//        ProducerService.showTypeScrollWorking();
+        List<Producer> producers = ProducerService.findByNameAndUpdateToUpperCase("dee");
+        log.info("Producers found '{}'", producers);
     }
 }

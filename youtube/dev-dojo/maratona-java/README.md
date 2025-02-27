@@ -280,7 +280,7 @@ Maratona Java Virado No Jiraya. Regravado desde a aula 0, com extrema qualidade,
 - [x] [263 - JDBC pt 12 - ResultSetMetaData](https://www.youtube.com/watch?v=l0bMybn4trY&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=264&pp=iAQB)
 - [x] [264 - JDBC pt 13 - DatabaseMetaData](https://www.youtube.com/watch?v=uaaseJJIhes&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=265&pp=iAQB)
 - [x] [265 - JDBC pt 14 - ResultSet TYPE SCROLL INSENSITIVE](https://www.youtube.com/watch?v=0M4RboYfjP4&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=266&pp=iAQB)
-- [ ] [266 - JDBC pt 15 - Atualizando registros com ResultSet](https://www.youtube.com/watch?v=TIunWd7vVX8&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=267&pp=iAQB)
+- [x] [266 - JDBC pt 15 - Atualizando registros com ResultSet](https://www.youtube.com/watch?v=TIunWd7vVX8&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=267&pp=iAQB)
 - [ ] [267 - JDBC pt 16 - Inserindo e deletando registros com ResultSet](https://www.youtube.com/watch?v=xeAYUaI3fbU&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=268&pp=iAQB)
 - [ ] [268 - JDBC pt 17 - PreparedStatement pt 01](https://www.youtube.com/watch?v=uQ2cESUncjM&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=269&pp=iAQB)
 - [ ] [269 - JDBC pt 18 - PreparedStatement pt 02](https://www.youtube.com/watch?v=8gbs3yGJtE8&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=270&pp=iAQB)
