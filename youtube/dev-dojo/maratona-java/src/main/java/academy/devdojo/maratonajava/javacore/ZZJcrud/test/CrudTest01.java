@@ -5,12 +5,13 @@ import academy.devdojo.maratonajava.javacore.ZZJcrud.service.ProducerService;
 import java.util.Scanner;
 
 public class CrudTest01 {
-    private static Scanner scanner = new Scanner(System.in);
+    private static final Scanner SCANNER = new Scanner(System.in);
     public static void main(String[] args) {
         int op;
         while (true) {
             producerMenu();
-            op = Integer.parseInt(scanner.nextLine());
+//            usando parseInt para evitar excecoes de digitar caracteres diferentes de numero
+            op = Integer.parseInt(SCANNER.nextLine());
             if (op == 0) break;
             ProducerService.buildMenu(op);
         }
@@ -18,7 +19,8 @@ public class CrudTest01 {
 
     private static void producerMenu() {
         System.out.println("Type the number of your operation: ");
-        System.out.printf("1. Search for producer%n");
+        System.out.printf("1. Search for a producer%n");
+        System.out.printf("2. Delete a producer%n");
         System.out.printf("0. Exit%n");
         System.out.print("Option: ");
     }

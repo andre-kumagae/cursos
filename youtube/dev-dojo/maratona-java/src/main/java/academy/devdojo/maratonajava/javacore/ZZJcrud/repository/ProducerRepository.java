@@ -15,7 +15,7 @@ import java.util.List;
 public class ProducerRepository {
 
     public static List<Producer> findByName(String name) {
-        log.info("Finding producer by name '{}",name);
+            log.info("Finding producer by name '{}", name);
         List<Producer> producers = new ArrayList<>();
         try (Connection conn = ConnectionFactory.getConnection();
              PreparedStatement ps = createPreparedStatementfindByName(conn, name);
@@ -33,7 +33,27 @@ public class ProducerRepository {
     private static PreparedStatement createPreparedStatementfindByName(Connection conn, String name) throws SQLException {
         String sql = "SELECT * FROM anime_store.producer WHERE name like ?;";
         PreparedStatement ps = conn.prepareStatement(sql);
-        ps.setString(1, name);
+        ps.setString(1, "%" + name + "%");
+        return ps;
+    }
+
+    public static void delete(int id) {
+        try (Connection conn = ConnectionFactory.getConnection();
+             PreparedStatement ps = createPreparedStatementDelete(conn, id)) {
+//            execute() é utilizado para qualqer comando e retorna boolean
+//            executeUpdate() só pdoe ser com UPDATE, INSERT ou DELETE e retorna int
+            ps.execute();
+            log.info("Deleted producer '{}' in the database.", id);
+        } catch (SQLException e) {
+            log.error("Error while trying to insert producer '{}'", id, e);
+//            throw new RuntimeException(e);
+        }
+    }
+
+    private static PreparedStatement createPreparedStatementDelete(Connection conn, Integer id) throws SQLException {
+        String sql = "DELETE FROM `anime_store`.`producer` WHERE (`id` = ?);";
+        PreparedStatement ps = conn.prepareStatement(sql);
+        ps.setInt(1, id);
         return ps;
     }
 
