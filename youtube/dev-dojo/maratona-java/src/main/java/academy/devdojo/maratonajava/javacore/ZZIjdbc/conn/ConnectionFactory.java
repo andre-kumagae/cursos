@@ -30,4 +30,9 @@ public class ConnectionFactory {
         jdbcRowSet.setPassword(password);
         return jdbcRowSet;
     }
+
+    public static CachedRowSet getCachedRowset() throws SQLException {
+//        como é um banco offline, nao precisamos configurar a url para conexao
+        return RowSetProvider.newFactory().createCachedRowSet();
+    }
 }

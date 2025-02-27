@@ -7,11 +7,15 @@ import academy.devdojo.maratonajava.javacore.ZZIjdbc.repository.ProducerReposito
 import java.util.List;
 
 public class ProducerServiceRowset {
-    public static List<Producer> findByNameJdbcRowset(String name){
+    public static List<Producer> findByNameJdbcRowset(String name) {
         return ProducerRepositoryRowset.findByNameJdbcRowset(name);
     }
 
     public static void updateJdbcRowset(Producer producer) {
         ProducerRepositoryRowset.updateJdbcRowset(producer);
+    }
+
+    public static void updateCachedRowSet(Producer producer) {
+        ProducerRepositoryRowset.updateCachedRowSet(producer);
     }
 }

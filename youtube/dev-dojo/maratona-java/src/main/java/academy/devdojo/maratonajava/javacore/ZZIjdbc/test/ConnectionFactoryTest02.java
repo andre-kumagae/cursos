@@ -10,10 +10,10 @@ import java.util.List;
 public class ConnectionFactoryTest02 {
     public static void main(String[] args) {
 //        List<Producer> producers = ProducerServiceRowset.findByNameJdbcRowset("NHK");
-        Producer producer = Producer.builder().id(1).name("MAD").build();
-        ProducerServiceRowset.updateJdbcRowset(producer);
+        Producer producer = Producer.builder().id(1).name("MADhouse").build();
+        ProducerServiceRowset.updateCachedRowSet(producer);
         log.info("Producer updated '{}'",producer);
-//        List<Producer> producers = ProducerRepositoryRowset.findByNameJdbcRowset("");
-//        log.info("Producer found '{}",producers);
+        List<Producer> producers = ProducerRepositoryRowset.findByNameJdbcRowset("");
+        log.info("Producer found '{}",producers);
     }
 }

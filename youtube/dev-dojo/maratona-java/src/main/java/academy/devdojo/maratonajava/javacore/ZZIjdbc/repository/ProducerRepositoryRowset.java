@@ -4,7 +4,9 @@ import academy.devdojo.maratonajava.javacore.ZZIjdbc.conn.ConnectionFactory;
 import academy.devdojo.maratonajava.javacore.ZZIjdbc.dominio.Producer;
 import academy.devdojo.maratonajava.javacore.ZZIjdbc.listener.CustomRowSetListener;
 
+import javax.sql.rowset.CachedRowSet;
 import javax.sql.rowset.JdbcRowSet;
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -43,6 +45,26 @@ public class ProducerRepositoryRowset {
             jrs.updateString("name", producer.getName());
             // deve executar updateRow para salvar o update
             jrs.updateRow();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static void updateCachedRowSet(Producer producer) {
+        String sql = "SELECT * FROM producer WHERE (`id` = ?);";
+        try (CachedRowSet crs = ConnectionFactory.getCachedRowset();
+             Connection conn = ConnectionFactory.getConnection()) {
+            // definimos que a persistencia é feita localmente
+            conn.setAutoCommit(false);
+            crs.setCommand(sql);
+            crs.setInt(1, producer.getId());
+            crs.execute(conn);
+            crs.acceptChanges();
+            if (!crs.next()) return;
+            crs.updateString("name", producer.getName());
+            crs.updateRow();
+            // comando necessario no CachedRowSet confirmar a mudanca
+            crs.acceptChanges();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
