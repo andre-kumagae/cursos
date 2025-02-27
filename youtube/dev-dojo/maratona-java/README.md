@@ -284,7 +284,7 @@ Maratona Java Virado No Jiraya. Regravado desde a aula 0, com extrema qualidade,
 - [x] [267 - JDBC pt 16 - Inserindo e deletando registros com ResultSet](https://www.youtube.com/watch?v=xeAYUaI3fbU&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=268&pp=iAQB)
 - [x] [268 - JDBC pt 17 - PreparedStatement pt 01](https://www.youtube.com/watch?v=uQ2cESUncjM&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=269&pp=iAQB)
 - [x] [269 - JDBC pt 18 - PreparedStatement pt 02](https://www.youtube.com/watch?v=8gbs3yGJtE8&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=270&pp=iAQB)
-- [ ] [270 - JDBC pt 19 - CallableStatement](https://www.youtube.com/watch?v=PRXFwv9p4qI&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=271&pp=iAQB)
+- [x] [270 - JDBC pt 19 - CallableStatement](https://www.youtube.com/watch?v=PRXFwv9p4qI&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=271&pp=iAQB)
 - [ ] [271 - JDBC pt 20 - Connected RowSet - JdbcRowSet pt 01](https://www.youtube.com/watch?v=wWLEz5wlpiE&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=272&pp=iAQB)
 - [ ] [272 - JDBC pt 21 - Connected RowSet - JdbcRowSet pt 02](https://www.youtube.com/watch?v=tvQcULQvYag&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=273&pp=iAQB)
 - [ ] [273 - JDBC pt 22 - Disconnected RowSet - CachedRowSet](https://www.youtube.com/watch?v=Fau61I3F5CY&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=274&pp=iAQB)

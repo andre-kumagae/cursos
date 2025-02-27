@@ -1,7 +1,6 @@
 package academy.devdojo.maratonajava.javacore.ZZIjdbc.test;
 
 import academy.devdojo.maratonajava.javacore.ZZIjdbc.dominio.Producer;
-import academy.devdojo.maratonajava.javacore.ZZIjdbc.repository.ProducerRepository;
 import academy.devdojo.maratonajava.javacore.ZZIjdbc.service.ProducerService;
 import lombok.extern.log4j.Log4j2;
 
@@ -21,7 +20,9 @@ public class ConnectionFactoryTest01 {
 //        log.info("Producer found '{}'", producers);
 //        List<Producer> producerList = ProducerService.findAll();
 //        log.info("Producer found '{}'", producerList);
-        Producer producerToUpdate = Producer.builder().id(1).name("madhouse").build();
-        ProducerService.preparedStatementUpdate(producerToUpdate);
+//        Producer producerToUpdate = Producer.builder().id(1).name("madhouse").build();
+//        ProducerService.preparedStatementUpdate(producerToUpdate);
+        List<Producer> producer = ProducerService.findByNameCallableStatement("sasa");
+        log.info("Producer found '{}'",producer);
     }
 }

@@ -271,6 +271,25 @@ public class ProducerRepository {
         return producers;
     }
 
+    public static List<Producer> findByNameCallableStatement(String name) {
+        if (!name.equals("")) {
+            log.info("Finding by producer name");
+        }
+//        mudamos a nossa query utilizando "?" como wildcard
+        List<Producer> producers = new ArrayList<>();
+        try (Connection conn = ConnectionFactory.getConnection();
+             CallableStatement cs = callableStatementFindByName(conn, name);
+             ResultSet rs = cs.executeQuery()) {
+            while (rs.next()) {
+                producers.add(Producer.builder().id(rs.getInt("id")).name(rs.getString("name")).build());
+            }
+        } catch (SQLException e) {
+            log.error("Error while trying to find all producers", e);
+            throw new RuntimeException(e);
+        }
+        return producers;
+    }
+
     private static PreparedStatement preparedStatementFindByName(Connection conn, String name) throws SQLException {
         String sql = "SELECT * FROM anime_store.producer WHERE name like ?;";
         PreparedStatement ps = conn.prepareStatement(sql);
@@ -279,6 +298,16 @@ public class ProducerRepository {
 //        ps.setString(1, String.format("%%%s%%",name));
 //        ps.setString(1, "%"+name+"%");
         return ps;
+    }
+
+    private static CallableStatement callableStatementFindByName(Connection conn, String name) throws SQLException {
+        String sql = "CALL `anime_store`.`sp_get_producer_byname`(?);";
+        CallableStatement cs = conn.prepareCall(sql);
+        cs.setString(1, name);
+//        Formas de buscar utilizando parte da String
+//        ps.setString(1, String.format("%%%s%%",name));
+//        ps.setString(1, "%"+name+"%");
+        return cs;
     }
 
     private static void insertNewProducer(String name, ResultSet rs) throws SQLException {
