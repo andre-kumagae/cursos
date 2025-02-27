@@ -37,6 +37,10 @@ public class ProducerService {
         ProducerRepository.showProducerMetadata();
     }
 
+    public static void showDriverMetadata() {
+        ProducerRepository.showDriverMetadata();
+    }
+
     // criando metodo validador de id para evitar repeticao de codigo
     private static void requireValidId(Integer id) {
         if (id == null || id <= 0) {

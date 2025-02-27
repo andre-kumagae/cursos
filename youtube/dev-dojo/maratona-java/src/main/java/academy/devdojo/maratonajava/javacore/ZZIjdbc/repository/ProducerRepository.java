@@ -62,7 +62,7 @@ public class ProducerRepository {
 //        String sql = "SELECT * FROM anime_store.producer WHERE name like %%%s%%;".formatted(name);
 //        Onde temos 1 escape para %, outro para %s e o ultimo para %
 //        Ou colocar no formatted, que ficaria mais legivel
-        String sql = "SELECT * FROM anime_store.producer WHERE name like '%s';".formatted("%"+name+"%");
+        String sql = "SELECT * FROM anime_store.producer WHERE name like '%s';".formatted("%" + name + "%");
         List<Producer> producers = new ArrayList<>();
         try (Connection conn = ConnectionFactory.getConnection();
              Statement stmt = conn.createStatement();
@@ -78,23 +78,49 @@ public class ProducerRepository {
     }
 
     public static void showProducerMetadata() {
-            log.info("Showing Producer Metadata");
+        log.info("Showing Producer Metadata");
         String sql = "SELECT * FROM anime_store.producer";
         try (Connection conn = ConnectionFactory.getConnection();
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
 //            metodo pra pegar metadados do banco
             ResultSetMetaData metaData = rs.getMetaData();
-//            aqui retiramos o while pois usaremos o for
-            rs.next();
+//            aqui retiramos o while  e o next pois usaremos o for
 //            numero de colunas para iterar
             int columnCount = metaData.getColumnCount();
             log.info("Columns count '{}'", columnCount);
             for (int i = 1; i <= columnCount; i++) {
-                log.info("Table name '{}'",metaData.getTableName(i));
-                log.info("Column name '{}'",metaData.getColumnName(i));
-                log.info("Column size '{}'",metaData.getColumnDisplaySize(i));
-                log.info("Column type '{}'",metaData.getColumnTypeName(i));
+                log.info("Table name '{}'", metaData.getTableName(i));
+                log.info("Column name '{}'", metaData.getColumnName(i));
+                log.info("Column size '{}'", metaData.getColumnDisplaySize(i));
+                log.info("Column type '{}'", metaData.getColumnTypeName(i));
+            }
+        } catch (SQLException e) {
+            log.error("Error while trying to find the metadata", e);
+        }
+    }
+
+    public static void showDriverMetadata() {
+        log.info("Showing Driver Metadata");
+        try (Connection conn = ConnectionFactory.getConnection()) {
+            DatabaseMetaData dbMetaData = conn.getMetaData();
+            if (dbMetaData.supportsResultSetType(ResultSet.TYPE_FORWARD_ONLY)) {
+                log.info("Supports TYPE_FORWARD_ONLY");
+                if (dbMetaData.supportsResultSetConcurrency(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE)) {
+                    log.info("and Supports CONCUR_UPDATABLE");
+                }
+            }
+            if (dbMetaData.supportsResultSetType(ResultSet.TYPE_SCROLL_INSENSITIVE)) {
+                log.info("Supports TYPE_SCROLL_INSENSITIVE");
+                if (dbMetaData.supportsResultSetConcurrency(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE)) {
+                    log.info("and Supports CONCUR_UPDATABLE");
+                }
+            }
+            if (dbMetaData.supportsResultSetType(ResultSet.TYPE_SCROLL_SENSITIVE)) {
+                log.info("Supports TYPE_SCROLL_SENSITIVE");
+                if (dbMetaData.supportsResultSetConcurrency(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE)) {
+                    log.info("and Supports CONCUR_UPDATABLE");
+                }
             }
         } catch (SQLException e) {
             log.error("Error while trying to find the metadata", e);
