@@ -10,7 +10,11 @@ import java.util.List;
 public class ConnectionFactoryTest01 {
     public static void main(String[] args) {
 //        ProducerService.showTypeScrollWorking();
-        List<Producer> producers = ProducerService.findByNameAndUpdateToUpperCase("dee");
-        log.info("Producers found '{}'", producers);
+//        ProducerService.findByNameAndDelete("tes");
+//        ProducerService.findByNameAndDelete("teste");
+//        List<Producer> producers = ProducerService.findByNameAndInsertWhenNotFound("Ghibli");
+//        log.info("Producers found '{}'", producers);
+        List<Producer> producers2 = ProducerService.findByNameAndInsertWhenNotFound("Bandai Namco");
+        log.info("Producers found '{}'", producers2);
     }
 }

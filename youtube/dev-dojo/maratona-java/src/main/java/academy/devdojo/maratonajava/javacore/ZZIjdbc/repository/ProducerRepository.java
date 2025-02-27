@@ -190,5 +190,55 @@ public class ProducerRepository {
         return producers;
     }
 
+    public static List<Producer> findByNameAndInsertWhenNotFound(String name) {
+        if (!name.equals("")) {
+            log.info("Finding by producer name");
+        }
+        String sql = "SELECT * FROM anime_store.producer WHERE name like '%s';".formatted("%" + name + "%");
+        List<Producer> producers = new ArrayList<>();
+        try (Connection conn = ConnectionFactory.getConnection();
+             Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+             ResultSet rs = stmt.executeQuery(sql)) {
+//            movendo o return do fim para o meio
+            if (rs.next()) return producers;
+//            mover o cursor para a linha após a ultima
+            insertNewProducer(name, rs);
+            producers.add(getProducer(rs));
 
+        } catch (SQLException e) {
+            log.error("Error while trying to find all producers", e);
+            throw new RuntimeException(e);
+        }
+        return producers;
+    }
+
+    public static void findByNameAndDelete(String name) {
+        String sql = "SELECT * FROM anime_store.producer WHERE name like '%s';".formatted("%" + name + "%");
+        try (Connection conn = ConnectionFactory.getConnection();
+             Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+             ResultSet rs = stmt.executeQuery(sql)) {
+            while (rs.next()) {
+                log.info("Deleting '{}'", rs.getString("name"));
+                rs.deleteRow();
+            }
+        } catch (SQLException e) {
+            log.error("Error while trying to find all producers", e);
+            throw new RuntimeException(e);
+        }
+    }
+
+
+    private static void insertNewProducer(String name, ResultSet rs) throws SQLException {
+        rs.moveToInsertRow();
+        rs.updateString("name", name);
+        rs.insertRow();
+    }
+
+    private static Producer getProducer(ResultSet rs) throws SQLException {
+//        pelo que entendi, chamamos o beforeFirst() para o cursos ir para antes da primeira linha, que é a linha padrão
+        rs.beforeFirst();
+//        e depois chamamos o next() é para ir para a primeira linha do ResultSet. Seria como dar um enter no MySQL Workbench e ele salta para a próxima linha
+        rs.next();
+        return Producer.builder().id(rs.getInt("id")).name(rs.getString("name")).build();
+    }
 }
