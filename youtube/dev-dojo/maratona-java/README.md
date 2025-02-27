@@ -289,7 +289,7 @@ Maratona Java Virado No Jiraya. Regravado desde a aula 0, com extrema qualidade,
 - [x] [272 - JDBC pt 21 - Connected RowSet - JdbcRowSet pt 02](https://www.youtube.com/watch?v=tvQcULQvYag&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=273&pp=iAQB)
 - [x] [273 - JDBC pt 22 - Disconnected RowSet - CachedRowSet](https://www.youtube.com/watch?v=Fau61I3F5CY&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=274&pp=iAQB)
 - [x] [274 - JDBC pt 23 - Transação](https://www.youtube.com/watch?v=ivueCjdK6C0&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=275&pp=iAQB)
-- [ ] [275 - JDBC pt 24 - CRUD pt 01 - findByName and findAll](https://www.youtube.com/watch?v=pBgOitdJbgY&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=276&pp=iAQB)
+- [x] [275 - JDBC pt 24 - CRUD pt 01 - findByName and findAll](https://www.youtube.com/watch?v=pBgOitdJbgY&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=276&pp=iAQB)
 - [ ] [276 - JDBC pt 25 - CRUD pt 02 - delete](https://www.youtube.com/watch?v=b-eWIeQ9PnQ&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=277&pp=iAQB)
 - [ ] [277 - JDBC pt 26 - CRUD pt 03 - save](https://www.youtube.com/watch?v=AlefsI8CiqY&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=278&pp=iAQB)
 - [ ] [278 - JDBC pt 27 - CRUD pt 04 - update](https://www.youtube.com/watch?v=0_-P83Uv_pA&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=279&pp=iAQB)
