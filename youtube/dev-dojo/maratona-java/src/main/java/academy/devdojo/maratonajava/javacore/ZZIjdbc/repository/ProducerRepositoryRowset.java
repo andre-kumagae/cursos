@@ -2,6 +2,7 @@ package academy.devdojo.maratonajava.javacore.ZZIjdbc.repository;
 
 import academy.devdojo.maratonajava.javacore.ZZIjdbc.conn.ConnectionFactory;
 import academy.devdojo.maratonajava.javacore.ZZIjdbc.dominio.Producer;
+import academy.devdojo.maratonajava.javacore.ZZIjdbc.listener.CustomRowSetListener;
 
 import javax.sql.rowset.JdbcRowSet;
 import java.sql.SQLException;
@@ -13,6 +14,7 @@ public class ProducerRepositoryRowset {
         String sql = "SELECT * FROM anime_store.producer WHERE name like ?;";
         List<Producer> producers = new ArrayList<>();
         try (JdbcRowSet jrs = ConnectionFactory.getJdbcRowset()) {
+            jrs.addRowSetListener(new CustomRowSetListener());
             jrs.setCommand(sql);
             jrs.setString(1, String.format("%%%s%%", name));
             jrs.execute();
@@ -24,5 +26,25 @@ public class ProducerRepositoryRowset {
             throw new RuntimeException(e);
         }
         return producers;
+    }
+
+    public static void updateJdbcRowset(Producer producer) {
+        String sql = "SELECT * FROM anime_store.producer WHERE (`id` = ?);";
+        try (JdbcRowSet jrs = ConnectionFactory.getJdbcRowset()) {
+            // criando nosso Listener
+            jrs.addRowSetListener(new CustomRowSetListener());
+            jrs.setCommand(sql);
+            // primeiro muda o id na query e executa
+            jrs.setInt(1, producer.getId());
+            jrs.execute();
+            // varre o banco e se nao achar o id, retorna false
+            if (!jrs.next()) return;
+            // e depois altera o valor
+            jrs.updateString("name", producer.getName());
+            // deve executar updateRow para salvar o update
+            jrs.updateRow();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
