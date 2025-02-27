@@ -23,6 +23,12 @@ public class ProducerService {
         ProducerRepository.update(producer);
     }
 
+    public static void preparedStatementUpdate(Producer producer) {
+//        validacao de id ter que ser 1 ou maior
+        requireValidId(producer.getId());
+        ProducerRepository.updatePreparedStatement(producer);
+    }
+
     //    Como funciona como um getter, nao precisamos validar e nem de parâmetros. Apenas ter o return
     public static List<Producer> findAll() {
        return ProducerRepository.findAll();

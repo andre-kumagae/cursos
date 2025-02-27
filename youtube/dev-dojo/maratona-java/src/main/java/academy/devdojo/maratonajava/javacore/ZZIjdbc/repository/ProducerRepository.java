@@ -47,6 +47,26 @@ public class ProducerRepository {
         }
     }
 
+    public static void updatePreparedStatement(Producer producer) {
+        try (Connection conn = ConnectionFactory.getConnection();
+             PreparedStatement ps = preparedStatementUpdate(conn, producer)) {
+            int rowsAffected = ps.executeUpdate();
+            log.info("Uptaded producer '{}' in the database. Database rows affected {}", producer.getId(), rowsAffected);
+        } catch (SQLException e) {
+            log.error("Error while trying to update producer '{}'", producer.getId(), e);
+            throw new RuntimeException(e);
+        }
+    }
+
+    private static PreparedStatement preparedStatementUpdate(Connection conn, Producer producer) throws SQLException {
+        String sql = "UPDATE `anime_store`.`producer` SET `name` = ? WHERE (`id` = ?);";
+        PreparedStatement ps = conn.prepareStatement(sql);
+//        a ordem aqui é da query, não do banco. Como ? de name é a primeira, indice dela é 1
+        ps.setString(1, producer.getName());
+        ps.setInt(2, producer.getId());
+        return ps;
+    }
+
     public static List<Producer> findAll() {
         log.info("Finding all producers");
         return findByName("");
@@ -232,13 +252,12 @@ public class ProducerRepository {
             log.info("Finding by producer name");
         }
 //        mudamos a nossa query utilizando "?" como wildcard
-        String sql = "SELECT * FROM anime_store.producer WHERE name like ?;";
         List<Producer> producers = new ArrayList<>();
         try (Connection conn = ConnectionFactory.getConnection();
              // Mudamos para PreparedStatement. Ele funciona com SetString em vez de formatted ns String para evitar SQL Injection.
              // Porém teriamos que declara-lo fora juntamente com ResultSet e isso faz perdemos o close() do try with resources.
              // Para resolvermos isso, criamos um metodo para tratar o PreparedStatement
-             PreparedStatement ps = createdPreparedStatement(conn, sql, name);
+             PreparedStatement ps = preparedStatementFindByName(conn, name);
              // Outra diferença é que o sql já foi pré-compilado no PreparedStatement, logo nao passamos como parametros no ExecuteQuery
              ResultSet rs = ps.executeQuery()) {
 //            como nao podemos dar valores dentro dos parametro de try, declaramos fora dele, junto com o ResultSet
@@ -252,7 +271,8 @@ public class ProducerRepository {
         return producers;
     }
 
-    private static PreparedStatement createdPreparedStatement(Connection conn, String sql, String name) throws SQLException {
+    private static PreparedStatement preparedStatementFindByName(Connection conn, String name) throws SQLException {
+        String sql = "SELECT * FROM anime_store.producer WHERE name like ?;";
         PreparedStatement ps = conn.prepareStatement(sql);
         ps.setString(1, name);
 //        Formas de buscar utilizando parte da String
