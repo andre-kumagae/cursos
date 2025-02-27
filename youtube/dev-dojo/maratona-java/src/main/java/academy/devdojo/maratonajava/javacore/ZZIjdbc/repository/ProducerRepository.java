@@ -67,6 +67,44 @@ public class ProducerRepository {
         return ps;
     }
 
+    public static void saveTransaction(List<Producer> producers) {
+//        Simulando varios inserts de uma vez, precisamos gera-los fora try with resources pra nao precisar abrir e fechar conexoes pra cada
+        try (Connection conn = ConnectionFactory.getConnection()) {
+//            precisamos desabilitar o auto commit para que a transacao seja concluida so se nao der erros
+            conn.setAutoCommit(false);
+//            aqui preparamos a declaracao
+            preparedStatementsaveTransaction(conn, producers);
+//            e so depois se der sucesso em todos os inserts, commitamos
+            conn.commit();
+        } catch (SQLException e) {
+            log.error("Error while trying to update producer '{}'", producers, e);
+            throw new RuntimeException(e);
+        }
+    }
+
+    private static void preparedStatementsaveTransaction(Connection conn, List<Producer> producers) throws SQLException {
+        String sql = "INSERT INTO `anime_store`.`producer` (`name`) VALUES (?);";
+//        boolean para validar possivel erro e rollback de comandos
+        boolean rollback = false;
+        for (Producer p : producers) {
+//            aqui fazemos o PrepapredStatemnt no try with resources para que seja iterado e aberta 1 e fechada conexao
+            try (PreparedStatement ps = conn.prepareStatement(sql)) {
+                log.info("Saving producer '{}'", p.getName());
+                ps.setString(1, p.getName());
+//                teste de falha para 1 dos producers
+                if (p.getName().equals("White fox")) throw new SQLException("Can't save white fox");
+                ps.execute();
+            } catch (SQLException e) {
+//                mudamos o boolean para chamar o roolback no metodo saveTransaction
+                rollback = true;
+                log.warn("Transaction is goind to be rollbacked");
+                throw new RuntimeException(e);
+            }
+        }
+//        aqui a Exception vai pra saveTransaction, por isso deixamos na assinatura
+        if (rollback) conn.rollback();
+    }
+
     public static List<Producer> findAll() {
         log.info("Finding all producers");
         return findByName("");
