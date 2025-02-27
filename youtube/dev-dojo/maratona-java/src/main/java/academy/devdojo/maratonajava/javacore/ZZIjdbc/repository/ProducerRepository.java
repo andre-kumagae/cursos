@@ -227,6 +227,39 @@ public class ProducerRepository {
         }
     }
 
+    public static List<Producer> findByNamePreparedStatement(String name) {
+        if (!name.equals("")) {
+            log.info("Finding by producer name");
+        }
+//        mudamos a nossa query utilizando "?" como wildcard
+        String sql = "SELECT * FROM anime_store.producer WHERE name like ?;";
+        List<Producer> producers = new ArrayList<>();
+        try (Connection conn = ConnectionFactory.getConnection();
+             // Mudamos para PreparedStatement. Ele funciona com SetString em vez de formatted ns String para evitar SQL Injection.
+             // Porém teriamos que declara-lo fora juntamente com ResultSet e isso faz perdemos o close() do try with resources.
+             // Para resolvermos isso, criamos um metodo para tratar o PreparedStatement
+             PreparedStatement ps = createdPreparedStatement(conn, sql, name);
+             // Outra diferença é que o sql já foi pré-compilado no PreparedStatement, logo nao passamos como parametros no ExecuteQuery
+             ResultSet rs = ps.executeQuery()) {
+//            como nao podemos dar valores dentro dos parametro de try, declaramos fora dele, junto com o ResultSet
+            while (rs.next()) {
+                producers.add(Producer.builder().id(rs.getInt("id")).name(rs.getString("name")).build());
+            }
+        } catch (SQLException e) {
+            log.error("Error while trying to find all producers", e);
+            throw new RuntimeException(e);
+        }
+        return producers;
+    }
+
+    private static PreparedStatement createdPreparedStatement(Connection conn, String sql, String name) throws SQLException {
+        PreparedStatement ps = conn.prepareStatement(sql);
+        ps.setString(1, name);
+//        Formas de buscar utilizando parte da String
+//        ps.setString(1, String.format("%%%s%%",name));
+//        ps.setString(1, "%"+name+"%");
+        return ps;
+    }
 
     private static void insertNewProducer(String name, ResultSet rs) throws SQLException {
         rs.moveToInsertRow();

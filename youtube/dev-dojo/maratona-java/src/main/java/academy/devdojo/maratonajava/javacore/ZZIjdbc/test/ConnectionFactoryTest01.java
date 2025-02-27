@@ -14,7 +14,12 @@ public class ConnectionFactoryTest01 {
 //        ProducerService.findByNameAndDelete("teste");
 //        List<Producer> producers = ProducerService.findByNameAndInsertWhenNotFound("Ghibli");
 //        log.info("Producers found '{}'", producers);
-        List<Producer> producers2 = ProducerService.findByNameAndInsertWhenNotFound("Bandai Namco");
-        log.info("Producers found '{}'", producers2);
+//        List<Producer> producers2 = ProducerService.findByNameAndInsertWhenNotFound("Bandai Namco");
+//        log.info("Producers found '{}'", producers2);
+        List<Producer> producers = ProducerService.findByNamePreparedStatement("MADHOUSE");
+        log.info("Producer found '{}'", producers);
+//        List<Producer> producerList = ProducerService.findAll();
+//        log.info("Producer found '{}'", producerList);
+
     }
 }
