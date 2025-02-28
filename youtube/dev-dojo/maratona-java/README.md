@@ -13,6 +13,9 @@ Maratona Java Virado No Jiraya. Regravado desde a aula 0, com extrema qualidade,
 * [Repositório da playlist](https://github.com/devdojobr/maratona-java-virado-no-jiraya)
 
 ## Progresso
+
+Início: 20/01/2025
+Fim: 28/02/2025
  
 - [x] [00 - Maratona Java Virado No Jiraya - Bem-vindo](https://www.youtube.com/watch?v=VKjFuX91G5Q&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=1&t=2s&pp=iAQB)
 - [x] [01 - O que esperar do curso](https://www.youtube.com/watch?v=ooCqalwSpuE&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW&index=2&pp=iAQB)
