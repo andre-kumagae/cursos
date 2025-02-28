@@ -19,6 +19,7 @@ public class AnimeService {
             case 2 -> delete();
             case 3 -> save();
             case 4 -> update();
+//            case 9 nao é necessario para voltar
         }
     }
 

@@ -65,6 +65,7 @@ public class AnimeRepository {
     }
 
     private static PreparedStatement createPrepareStatementFindById(Connection conn, Integer id) throws SQLException {
+//  se colocarmos alias em colunas unicas, nao funciona. Sò funciona no name, pois tem que diferenciar anime.name e producer.name
         String sql = """
                 SELECT a.id as 'anime_id', a.name as 'anime_name', a.episodes, p.id as 'producer_id', p.name as 'producer_name' FROM anime_store.anime a INNER JOIN anime_store.producer p ON a.producer_id = p.id WHERE a.id = ?;
                 """;
