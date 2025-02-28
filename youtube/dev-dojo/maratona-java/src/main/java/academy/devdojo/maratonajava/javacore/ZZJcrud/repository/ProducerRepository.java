@@ -4,10 +4,7 @@ import academy.devdojo.maratonajava.javacore.ZZJcrud.conn.ConnectionFactory;
 import academy.devdojo.maratonajava.javacore.ZZJcrud.dominio.Producer;
 import lombok.extern.log4j.Log4j2;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +12,7 @@ import java.util.List;
 public class ProducerRepository {
 
     public static List<Producer> findByName(String name) {
-            log.info("Finding producer by name '{}", name);
+        log.info("Finding producer by name '{}", name);
         List<Producer> producers = new ArrayList<>();
         try (Connection conn = ConnectionFactory.getConnection();
              PreparedStatement ps = createPreparedStatementfindByName(conn, name);
@@ -54,6 +51,26 @@ public class ProducerRepository {
         String sql = "DELETE FROM `anime_store`.`producer` WHERE (`id` = ?);";
         PreparedStatement ps = conn.prepareStatement(sql);
         ps.setInt(1, id);
+        return ps;
+    }
+
+    public static void save(Producer producer) {
+        try (Connection conn = ConnectionFactory.getConnection();
+             PreparedStatement ps = createpreparedStatementSave(conn, producer)) {
+            ps.execute();
+            ResultSet rs = ps.getGeneratedKeys();
+            if (rs.next()) log.info("Saving producer '{}'", rs.getInt(1));
+            log.info("Updated producer '{}' in the database", producer.getName());
+        } catch (SQLException e) {
+            log.error("Error while trying to update producer '{}'", producer.getId(), e);
+            throw new RuntimeException(e);
+        }
+    }
+
+    private static PreparedStatement createpreparedStatementSave(Connection conn, Producer producer) throws SQLException {
+        String sql = "INSERT INTO `anime_store`.`producer` (`name`) VALUES (?);";
+        PreparedStatement ps = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+        ps.setString(1, producer.getName());
         return ps;
     }
 

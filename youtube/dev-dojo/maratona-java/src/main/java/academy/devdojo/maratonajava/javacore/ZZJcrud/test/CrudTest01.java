@@ -18,9 +18,10 @@ public class CrudTest01 {
     }
 
     private static void producerMenu() {
-        System.out.println("Type the number of your operation: ");
+        System.out.println("\nType the number of your operation: ");
         System.out.printf("1. Search for a producer%n");
         System.out.printf("2. Delete a producer%n");
+        System.out.printf("3. insert a producer%n");
         System.out.printf("0. Exit%n");
         System.out.print("Option: ");
     }
