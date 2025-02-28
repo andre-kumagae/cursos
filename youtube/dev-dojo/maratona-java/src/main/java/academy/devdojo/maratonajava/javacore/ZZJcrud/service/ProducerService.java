@@ -2,6 +2,7 @@ package academy.devdojo.maratonajava.javacore.ZZJcrud.service;
 
 import academy.devdojo.maratonajava.javacore.ZZJcrud.dominio.Producer;
 import academy.devdojo.maratonajava.javacore.ZZJcrud.repository.ProducerRepository;
+import academy.devdojo.maratonajava.javacore.ZZJcrud.test.CrudTest01;
 
 import java.util.Optional;
 import java.util.Scanner;
@@ -11,14 +12,13 @@ public class ProducerService {
     private static final Scanner SCANNER = new Scanner(System.in);
 
     // menu chamado no main
-    public static void buildMenu(int op) {
+    public static void menu(int op) {
 //        substituido para o enhanced switch
         switch (op) {
             case 1 -> findByName();
             case 2 -> delete();
             case 3 -> save();
             case 4 -> update();
-            default -> throw new IllegalArgumentException("Not a valid option");
         }
     }
 
