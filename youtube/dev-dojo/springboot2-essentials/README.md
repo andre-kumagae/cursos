@@ -16,7 +16,7 @@ O que é necessário para você ficar por dentro da tecnologia do momento e do m
 - [x] [Spring Boot 2 Essentials 01 - O que é Spring Boot](https://www.youtube.com/watch?v=aspWYs8lp48&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=2&t=1s&pp=iAQB)
 - [x] [Spring Boot 2 Essentials 02 - Criando projeto na pedreiragem pt 01](https://www.youtube.com/watch?v=w8I7jWfUFLg&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=3&pp=iAQB)
 - [x] [Spring Boot 2 Essentials 03 - Criando projeto na pedreiragem pt 02](https://www.youtube.com/watch?v=szrqiHLbUq0&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=4&pp=iAQB)
-- [ ] [Spring Boot 2 Essentials 04 - @Component, @Autowired, @SpringBootApplication](https://www.youtube.com/watch?v=4sndRmKpMYI&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=5&pp=iAQB)
+- [x] [Spring Boot 2 Essentials 04 - @Component, @Autowired, @SpringBootApplication](https://www.youtube.com/watch?v=4sndRmKpMYI&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=5&pp=iAQB)
 - [ ] [Spring Boot 2 Essentials 05 - Hot Swap com Spring Boot Devtools](https://www.youtube.com/watch?v=8W8t2yh8CD4&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=6&pp=iAQB)
 - [ ] [Spring Boot 2 Essentials 06 - Gerando projeto com start.spring.io](https://www.youtube.com/watch?v=sZGw-evH0OE&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=7&pp=iAQB)
 - [ ] [Spring Boot 2 Essentials 07 - Método GET parte 1](https://www.youtube.com/watch?v=ChstGsjYly0&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=8&pp=iAQB)
