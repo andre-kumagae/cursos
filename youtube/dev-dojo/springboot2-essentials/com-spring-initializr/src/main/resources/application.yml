@@ -1,0 +1,8 @@
+server:
+  error:
+    include-stacktrace: on_param
+
+spring:
+  output:
+    ansi:
+      enabled: ALWAYS

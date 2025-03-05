@@ -5,9 +5,9 @@ import academy.devdojo.springboot2.service.AnimeService;
 import academy.devdojo.springboot2.util.DateUtil;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -20,10 +20,21 @@ public class AnimeController {
     private final DateUtil dateUtil;
     private final AnimeService animeService;
 
-    //localhost:8080/anime/list
+    //localhost:8080/animes
     @GetMapping
-    public List<Anime> list() {
+    public ResponseEntity<List<Anime>> list() {
         log.info(dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
-        return animeService.listAll();
+//        retornar status http juntamente com a lista
+//        return new ResponseEntity<>(animeService.listAll(), HttpStatus.OK);
+        return ResponseEntity.ok(animeService.listAll());
+    }
+
+    @GetMapping(path = "/{id}")
+//    Utilizamos a anotacao PathVariable para pegar o id descrito no path
+    public ResponseEntity<Anime> findById(@PathVariable long id) {
+        log.info(dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
+//        retornar status http juntamente com a lista
+//        return new ResponseEntity<>(animeService.listAll(), HttpStatus.OK);
+        return ResponseEntity.ok(animeService.findById(id));
     }
 }
