@@ -21,7 +21,7 @@ O que é necessário para você ficar por dentro da tecnologia do momento e do m
 - [x] [Spring Boot 2 Essentials 06 - Gerando projeto com start.spring.io](https://www.youtube.com/watch?v=sZGw-evH0OE&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=7&pp=iAQB)
 - [x] [Spring Boot 2 Essentials 07 - Método GET parte 1](https://www.youtube.com/watch?v=ChstGsjYly0&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=8&pp=iAQB)
 - [x] [Spring Boot 2 Essentials 08 - Método GET parte 2](https://www.youtube.com/watch?v=6ykxjpFrnJE&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=9&pp=iAQB)
-- [ ] [Spring Boot 2 Essentials 09 - Método POST](https://www.youtube.com/watch?v=Mqw16-koH-8&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=10&pp=iAQB)
+- [x] [Spring Boot 2 Essentials 09 - Método POST](https://www.youtube.com/watch?v=Mqw16-koH-8&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=10&pp=iAQB)
 - [ ] [Spring Boot 2 Essentials 10 - Método DELETE](https://www.youtube.com/watch?v=yHHV_sr_gsI&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=11&pp=iAQB)
 - [ ] [Spring Boot 2 Essentials 11 - Método PUT](https://www.youtube.com/watch?v=aJ43SfY8QKs&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=12&pp=iAQB)
 - [ ] [Spring Boot 2 Essentials 12 - Instalando Docker e executando container MySQL](https://www.youtube.com/watch?v=ZPUC3wZgDoA&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=13&pp=iAQB)
