@@ -27,7 +27,7 @@ O que é necessário para você ficar por dentro da tecnologia do momento e do m
 - [x] [Spring Boot 2 Essentials 12 - Instalando Docker e executando container MySQL](https://www.youtube.com/watch?v=ZPUC3wZgDoA&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=13&pp=iAQB)
 - [x] [Spring Boot 2 Essentials 13 - Spring Data JPA pt 01](https://www.youtube.com/watch?v=npW5nkMQ6Vs&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=14&pp=iAQB)
 - [x] [Spring Boot 2 Essentials 14 - Spring Data JPA pt 02](https://www.youtube.com/watch?v=JRA5w6FSw0E&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=15&pp=iAQB)
-- [ ] [Spring Boot 2 Essentials 15 - Framework de Mapeamento MapStruct](https://www.youtube.com/watch?v=A9-Inky1Fjo&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=16&pp=iAQB)
+- [x] [Spring Boot 2 Essentials 15 - Framework de Mapeamento MapStruct](https://www.youtube.com/watch?v=A9-Inky1Fjo&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=16&pp=iAQB)
 - [ ] [Spring Boot 2 Essentials 16 - Request Params](https://www.youtube.com/watch?v=juVa6LYSYKg&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=17&pp=iAQB)
 - [ ] [Spring Boot 2 Essentials 17 - Exceções Customizadas](https://www.youtube.com/watch?v=1CJPEhgrxOU&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=18&pp=iAQB)
 - [ ] [Spring Boot 2 Essentials 18 - Handler Global](https://www.youtube.com/watch?v=TpXirJnXa-8&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=19&pp=iAQB)
