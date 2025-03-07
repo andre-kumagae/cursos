@@ -5,38 +5,33 @@ import academy.devdojo.springboot2.requests.AnimePostRequestBody;
 import academy.devdojo.springboot2.requests.AnimePutRequestBody;
 import academy.devdojo.springboot2.service.AnimeService;
 import academy.devdojo.springboot2.util.DateUtil;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Log4j2
 @RestController
 @RequestMapping("animes")
-@Log4j2
 @RequiredArgsConstructor
 public class AnimeController {
     private final DateUtil dateUtil;
     private final AnimeService animeService;
 
-    //localhost:8080/animes
     @GetMapping
     public ResponseEntity<List<Anime>> list() {
         log.info(dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
-//        retornar status http juntamente com a lista
-//        return new ResponseEntity<>(animeService.listAll(), HttpStatus.OK);
         return ResponseEntity.ok(animeService.listAll());
     }
 
     @GetMapping(path = "/{id}")
-//    Utilizamos a anotacao PathVariable para pegar o id descrito no path
     public ResponseEntity<Anime> findById(@PathVariable long id) {
-        log.info(dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
-//        retornar status http juntamente com a lista
-//        return new ResponseEntity<>(animeService.listAll(), HttpStatus.OK);
         return ResponseEntity.ok(animeService.findByIdOrThrowBadRequestException(id));
     }
 
@@ -46,7 +41,7 @@ public class AnimeController {
     }
 
     @PostMapping
-    public ResponseEntity<Anime> save(@RequestBody AnimePostRequestBody animePostRequestBody) {
+    public ResponseEntity<Anime> save(@RequestBody @Valid AnimePostRequestBody animePostRequestBody) {
         return new ResponseEntity<>(animeService.save(animePostRequestBody), HttpStatus.CREATED);
     }
 
@@ -56,7 +51,7 @@ public class AnimeController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-    @PutMapping(path = "/{id}")
+    @PutMapping
     public ResponseEntity<Void> replace(@RequestBody AnimePutRequestBody animePutRequestBody) {
         animeService.replace(animePutRequestBody);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
