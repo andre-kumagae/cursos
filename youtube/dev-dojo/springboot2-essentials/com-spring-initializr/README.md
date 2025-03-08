@@ -36,7 +36,7 @@ O que é necessário para você ficar por dentro da tecnologia do momento e do m
 - [x] [Spring Boot 2 Essentials 21 - Handler para validação de campos](https://www.youtube.com/watch?v=tRb_OscShmc&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=22&pp=iAQB)
 - [x] [Spring Boot 2 Essentials 22 - Sobrescrevendo handler do Spring](https://www.youtube.com/watch?v=UgO1fdvOFBk&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=23&pp=iAQB)
 - [x] [Spring Boot 2 Essentials 23 - Paginação](https://www.youtube.com/watch?v=ongEOYHl-6o&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=24&pp=iAQB)
-- [ ] [Spring Boot 2 Essentials 24 - WebMvcConfigurer](https://www.youtube.com/watch?v=1_Bp3JFZ4Cs&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=25&pp=iAQB)
+- [x] [Spring Boot 2 Essentials 24 - WebMvcConfigurer](https://www.youtube.com/watch?v=1_Bp3JFZ4Cs&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=25&pp=iAQB)
 - [ ] [Spring Boot 2 Essentials 25 - Sorting, Log SQL](https://www.youtube.com/watch?v=mg8zkaPQPxs&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=26&pp=iAQB)
 - [ ] [Spring Boot 2 Essentials 26 - RestTemplate getForObject e getForEntity](https://www.youtube.com/watch?v=Qnxv6ovn3Xc&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=27&pp=iAQB)
 - [ ] [Spring Boot 2 Essentials 27 - RestTemplate exchange](https://www.youtube.com/watch?v=f93kYkmIyPo&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=28&pp=iAQB)
