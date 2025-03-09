@@ -44,7 +44,7 @@ O que é necessário para você ficar por dentro da tecnologia do momento e do m
 - [x] [Spring Boot 2 Essentials 29 - RestTemplate PUT and DELETE](https://www.youtube.com/watch?v=wSRt8bJxeDU&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=30&pp=iAQB)
 - [x] [Spring Boot 2 Essentials 30 - Spring Data JPA Test pt 01](https://www.youtube.com/watch?v=wBne8fRvsxw&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=31&pp=iAQB)
 - [x] [Spring Boot 2 Essentials 31 - Spring Data JPA Test pt 02](https://www.youtube.com/watch?v=UZgnPfeeXHE&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=32&pp=iAQB)
-- [ ] [Spring Boot 2 Essentials 32 - Spring Data JPA Test pt 03 - Exceções](https://www.youtube.com/watch?v=GycZEsrEDG0&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=33&pp=iAQB)
+- [x] [Spring Boot 2 Essentials 32 - Spring Data JPA Test pt 03 - Exceções](https://www.youtube.com/watch?v=GycZEsrEDG0&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=33&pp=iAQB)
 - [ ] [Spring Boot 2 Essentials 33 - Unit Tests pt 01](https://www.youtube.com/watch?v=XuAd2LHNjzY&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=34&pp=iAQB)
 - [ ] [Spring Boot 2 Essentials 34 - Unit Tests pt 02](https://www.youtube.com/watch?v=b80Xqg4aFOQ&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=35&pp=iAQB)
 - [ ] [Spring Boot 2 Essentials 35 - Unit Tests pt 03](https://www.youtube.com/watch?v=bWbzpsePKdk&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=36&pp=iAQB)
