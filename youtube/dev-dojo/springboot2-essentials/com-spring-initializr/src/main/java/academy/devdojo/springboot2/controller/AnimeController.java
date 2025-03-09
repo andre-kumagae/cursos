@@ -18,9 +18,9 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
-@Log4j2
 @RestController
 @RequestMapping("animes")
+@Log4j2
 @RequiredArgsConstructor
 public class AnimeController {
     private final DateUtil dateUtil;
@@ -30,6 +30,12 @@ public class AnimeController {
     public ResponseEntity<Page<Anime>> list(Pageable pageable) {
         log.info(dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
         return ResponseEntity.ok(animeService.listAll(pageable));
+    }
+
+    @GetMapping(path = "/all")
+    public ResponseEntity<List<Anime>> listAll() {
+        log.info(dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
+        return ResponseEntity.ok(animeService.listAllNonPageable());
     }
 
     @GetMapping(path = "/{id}")
