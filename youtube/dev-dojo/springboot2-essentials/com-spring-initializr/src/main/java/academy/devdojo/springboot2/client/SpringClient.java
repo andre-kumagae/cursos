@@ -49,10 +49,6 @@ public class SpringClient {
         // HttpEntity null e ultimo metodo para pegar o id
         ResponseEntity<Void> samuraiChampolooDeleted = new RestTemplate().exchange("http://localhost:8080/animes/{id}", HttpMethod.DELETE, null, Void.class, updatedAnime.getId());
         log.info("Saved anime: {}", samuraiChampolooDeleted);
-
-
-
-
     }
 
     private static HttpHeaders createJsonHeader() {
