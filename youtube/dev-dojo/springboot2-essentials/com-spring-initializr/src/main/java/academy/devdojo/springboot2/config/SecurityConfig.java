@@ -12,29 +12,42 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
-//@EnableWebSecurity
 @Configuration
 @Log4j2
 public class SecurityConfig {
 
     @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http
-                .csrf(Customizer.withDefaults())
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http.csrf(csrf -> csrf.disable()) // Caso deseje habilitar, altere aqui
                 .authorizeHttpRequests(authorize -> authorize
                         .anyRequest().authenticated())
-                .httpBasic(Customizer.withDefaults())
-                .formLogin(Customizer.withDefaults());
+                .httpBasic(Customizer.withDefaults());
         return http.build();
     }
 
     @Bean
     public InMemoryUserDetailsManager userDetailsService() {
-        PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
-        UserDetails user = User.withUsername("devdojo")
-                .password(encoder.encode("academy"))
+        PasswordEncoder passwordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
+        UserDetails user1 = User.withUsername("william")
+                .password(passwordEncoder.encode("academy"))
+                .roles("USER", "ADMIN")
+                .build();
+
+        UserDetails user2 = User.withUsername("devdojo")
+                .password(passwordEncoder.encode("academy"))
                 .roles("USER")
                 .build();
-        return new InMemoryUserDetailsManager(user);
+
+        return new InMemoryUserDetailsManager(user1, user2);
     }
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return PasswordEncoderFactories.createDelegatingPasswordEncoder();
+    }
+
+    /* postman function
+    var xsrfCookie = postman.getResponseCookie("XSRF-TOKEN");
+    postman.setEnvironmentVariable("x-xsrf-token", xsrfCookie.value);
+     */
 }
