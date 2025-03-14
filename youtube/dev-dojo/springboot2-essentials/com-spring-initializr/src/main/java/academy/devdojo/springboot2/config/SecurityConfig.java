@@ -26,27 +26,16 @@ public class SecurityConfig {
 
     @Bean
     protected SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http
-                .csrf(AbstractHttpConfigurer::disable)
-                .authorizeHttpRequests((authz) -> authz.anyRequest().authenticated())
-                .formLogin(Customizer.withDefaults())
-                .httpBasic(Customizer.withDefaults());
-
+        http.csrf(AbstractHttpConfigurer::disable).authorizeHttpRequests((authz) -> authz.requestMatchers("/animes/admin/**").hasRole("ADMIN").requestMatchers("/animes/**").hasRole("USER").anyRequest().authenticated()).formLogin(Customizer.withDefaults()).httpBasic(Customizer.withDefaults());
         return http.build();
     }
 
     @Bean
     protected AuthenticationManager authManager(HttpSecurity http) throws Exception {
-        AuthenticationManagerBuilder authenticationManagerBuilder =
-                http.getSharedObject(AuthenticationManagerBuilder.class);
-
+        AuthenticationManagerBuilder authenticationManagerBuilder = http.getSharedObject(AuthenticationManagerBuilder.class);
         PasswordEncoder passwordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
         log.info("password enconder: '{}'", passwordEncoder.encode("academy"));
-
-        authenticationManagerBuilder
-                .userDetailsService(devDojoUserDetailsService)
-                .passwordEncoder(passwordEncoder);
-
+        authenticationManagerBuilder.userDetailsService(devDojoUserDetailsService).passwordEncoder(passwordEncoder);
         return authenticationManagerBuilder.build();
     }
 }
