@@ -55,7 +55,7 @@ O que é necessário para você ficar por dentro da tecnologia do momento e do m
 - [x] [Spring Boot 2 Essentials 40 - Spring Security pt 01 - CSRF Token](https://www.youtube.com/watch?v=lOzQnC4tRRI&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=41&pp=iAQB)
 - [x] [Spring Boot 2 Essentials 41 - Spring Security pt 02 - Segurança a nível de métodos com PreAuthori](https://www.youtube.com/watch?v=4zrOtObXkK0&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=42&pp=iAQB)
 - [x] [Spring Boot 2 Essentials 42 - Spring Security pt 03 - Authentication Principal e página padrão de](https://www.youtube.com/watch?v=NZHLNeoUYWM&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=43&pp=iAQB)
-- [ ] [Spring Boot 2 Essentials 43 - Spring Security pt 04 - Autenticação com usuário no banco de dados](https://www.youtube.com/watch?v=6c9Nz-sG2EM&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=44&pp=iAQB)
+- [x] [Spring Boot 2 Essentials 43 - Spring Security pt 04 - Autenticação com usuário no banco de dados](https://www.youtube.com/watch?v=6c9Nz-sG2EM&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=44&pp=iAQB)
 - [ ] [Spring Boot 2 Essentials 44 - Spring Security pt 05 - Proteção de URL com Antmatcher](https://www.youtube.com/watch?v=3JFOGa-c8eM&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=45&pp=iAQB)
 - [ ] [Spring Boot 2 Essentials 45 - Spring Security pt 06 - Testes de Integração com Spring Security](https://www.youtube.com/watch?v=LfVEd9KlFSQ&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=46&pp=iAQB)
 - [ ] [Spring Boot 2 Essentials 46 - Documentação com SpringDoc OpenAPI pt 01](https://www.youtube.com/watch?v=UxnynWV4Rs0&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=47&pp=iAQB)
