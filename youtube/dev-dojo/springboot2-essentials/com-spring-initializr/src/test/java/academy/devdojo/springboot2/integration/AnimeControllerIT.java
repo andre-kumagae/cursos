@@ -8,6 +8,7 @@ import academy.devdojo.springboot2.requests.AnimePostRequestBody;
 import academy.devdojo.springboot2.util.AnimeCreator;
 import academy.devdojo.springboot2.util.AnimePostRequestBodyCreator;
 import academy.devdojo.springboot2.wrapper.PageableResponse;
+import jakarta.transaction.Transactional;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -46,13 +47,13 @@ class AnimeControllerIT {
     private DevDojoUserRepository devDojoUserRepository;
     private static final DevDojoUser USER = DevDojoUser.builder()
             .name("DevDojo Academy")
-            .password("{bcrypt}$2a$10$hSTIR1LEGbkA6US1B0IJVeoTsHrFKzPwXSeE40SvIFckopmMHoUTm")
+            .password("{bcrypt}$2a$10$3ZwMP6kXp5nnVRhPQ.FuuOJym410lNHzeOIsY7PBSFBfLgCJo1Bim")
             .username("devdojo")
             .authorities("ROLE_USER")
             .build();
     private static final DevDojoUser ADMIN = DevDojoUser.builder()
             .name("William Suane")
-            .password("{bcrypt}$2a$10$hSTIR1LEGbkA6US1B0IJVeoTsHrFKzPwXSeE40SvIFckopmMHoUTm")
+            .password("{bcrypt}$2a$10$3ZwMP6kXp5nnVRhPQ.FuuOJym410lNHzeOIsY7PBSFBfLgCJo1Bim")
             .username("william")
             .authorities("ROLE_USER,ROLE_ADMIN")
             .build();
