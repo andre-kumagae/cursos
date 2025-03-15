@@ -4,6 +4,8 @@ server:
   address:
 
 spring:
+  application:
+    name: springboot2-essentials
   output:
     ansi:
       enabled: ALWAYS

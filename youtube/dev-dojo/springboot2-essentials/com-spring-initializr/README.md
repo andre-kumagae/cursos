@@ -62,5 +62,5 @@ O que é necessário para você ficar por dentro da tecnologia do momento e do m
 - [x] [Spring Boot 2 Essentials 47 - Documentação com SpringDoc OpenAPI pt 02](https://www.youtube.com/watch?v=GodjXTjPtYg&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=48&pp=iAQB)
 - [x] [Spring Boot 2 Essentials 48 - Spring Boot Actuator](https://www.youtube.com/watch?v=9nOMLOnXLHo&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=49&pp=iAQB)
 - [x] [Spring Boot 2 Essentials 49 - Monitorando aplicação com prometheus](https://www.youtube.com/watch?v=UKPTqzIdcPA&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=50&pp=iAQB)
-- [ ] [Spring Boot 2 Essentials 50 - Monitorando métricas com gráficos no Grafana](https://www.youtube.com/watch?v=dvznW_hLTQs&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=51&pp=iAQB)
-- [ ] [Spring Boot 2 Essentials 51 - Criado imagem com jib e executando via docker-compose](https://www.youtube.com/watch?v=CXvW0b4bDRY&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=52&pp=iAQB)
+- [x] [Spring Boot 2 Essentials 50 - Monitorando métricas com gráficos no Grafana](https://www.youtube.com/watch?v=dvznW_hLTQs&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=51&pp=iAQB)
+- [x] [Spring Boot 2 Essentials 51 - Criado imagem com jib e executando via docker-compose](https://www.youtube.com/watch?v=CXvW0b4bDRY&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H&index=52&pp=iAQB)
