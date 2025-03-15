@@ -26,7 +26,7 @@ public class SecurityConfig {
 
     @Bean
     protected SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http.csrf(AbstractHttpConfigurer::disable).authorizeHttpRequests((authz) -> authz.requestMatchers("/animes/admin/**").hasRole("ADMIN").requestMatchers("/animes/**").hasRole("USER").anyRequest().authenticated()).formLogin(Customizer.withDefaults()).httpBasic(Customizer.withDefaults());
+        http.csrf(AbstractHttpConfigurer::disable).authorizeHttpRequests((authz) -> authz.requestMatchers("/animes/admin/**").hasRole("ADMIN").requestMatchers("/animes/**").hasRole("USER").requestMatchers("/actuator/**").permitAll().anyRequest().authenticated()).formLogin(Customizer.withDefaults()).httpBasic(Customizer.withDefaults());
         return http.build();
     }
 

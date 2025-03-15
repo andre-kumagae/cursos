@@ -25,4 +25,16 @@ logging:
         SQL: DEBUG
 
 
+management:
+  info:
+    env:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+info:
+  app: Spring Boot 2 Essentials By DevDOjo
+  website: https://devdojo.academy
+  github: https://github.com/devdojobr/springboot2-essentials/
 
